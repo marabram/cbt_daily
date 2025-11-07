@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CBT-ThoughtRecords.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>DailyNotes 1.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>DailyNotes 2.0.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>DailyNotes.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +28,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1FAPP7001</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D3B23CD92EBDB80C002248FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D3B23CE82EBDB910002248FE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
