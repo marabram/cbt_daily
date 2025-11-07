@@ -17,8 +17,8 @@ final class AppTemplate: ObservableObject {
 }
 
 struct TodayView: View {
-    @Environment(\\.modelContext) private var ctx
-    @Query(sort: \\NoteEntry.date, order: .reverse) private var entries: [NoteEntry]
+    @Environment(\.modelContext) private var ctx
+    @Query(sort: \NoteEntry.date, order: .reverse) private var entries: [NoteEntry]
     @StateObject private var tmpl = AppTemplate()
     @State private var entry: NoteEntry?
 

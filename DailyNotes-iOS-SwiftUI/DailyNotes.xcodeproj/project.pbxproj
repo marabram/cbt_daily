@@ -17,6 +17,7 @@
 		1FAPP0008 /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAPP1008 /* Exporter.swift */; };
 		1FAPP0009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAPP2001 /* LaunchScreen.storyboard */; };
 		1FAPP000A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FAPP3001 /* Assets.xcassets */; };
+		D3B23CD52EBDAA5D002248FE /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B23CD42EBDA29C002248FE /* SettingsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B23CD52EBDAA5D002248FE /* SettingsScreen.swift in Sources */,
 				1FAPP0001 /* DailyNotesApp.swift in Sources */,
 				1FAPP0002 /* Models.swift in Sources */,
 				1FAPP0003 /* RootView.swift in Sources */,

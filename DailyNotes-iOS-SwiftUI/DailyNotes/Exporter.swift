@@ -43,7 +43,20 @@ enum Exporter {
         return writeTempFile(named: "notes.csv", data: Data(csv.utf8))
     }
 
-    static func pdfFor(entry: NoteEntry) -> URL {
+    @MainActor static func pdfFor(entry: NoteEntry) -> URL {
+        if Thread.isMainThread {
+            return pdfForOnMain(entry: entry)
+        } else {
+            var result: URL!
+            DispatchQueue.main.sync {
+                result = pdfForOnMain(entry: entry)
+            }
+            return result
+        }
+    }
+
+    @MainActor
+    private static func pdfForOnMain(entry: NoteEntry) -> URL {
         let view = VStack(alignment: .leading, spacing: 10) {
             Text(entry.date.formatted(date: .long, time: .omitted))
                 .font(.title.bold())

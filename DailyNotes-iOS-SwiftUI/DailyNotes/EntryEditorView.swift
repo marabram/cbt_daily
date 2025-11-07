@@ -2,8 +2,8 @@ import SwiftUI
 import SwiftData
 
 struct EntryEditorView: View, Identifiable {
-    @Environment(\\.dismiss) private var dismiss
-    @Environment(\\.modelContext) private var ctx
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var ctx
     @State var entry: NoteEntry
     var id: String { entry.dayKey }
 

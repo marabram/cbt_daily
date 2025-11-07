@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 
 struct CalendarScreen: View {
-    @Environment(\\.modelContext) private var ctx
+    @Environment(\.modelContext) private var ctx
     @Query private var entries: [NoteEntry]
     @State private var monthAnchor = Calendar.current.startOfDay(for: Date())
     @State private var showingEntry: NoteEntry?

@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 
 struct HistoryScreen: View {
-    @Query(sort: \\NoteEntry.date, order: .reverse) private var entries: [NoteEntry]
+    @Query(sort: \NoteEntry.date, order: .reverse) private var entries: [NoteEntry]
     @State private var search = ""
 
     var body: some View {
@@ -22,3 +22,4 @@ struct HistoryScreen: View {
         return items.filter { $0.content.localizedCaseInsensitiveContains(search) }
     }
 }
+
