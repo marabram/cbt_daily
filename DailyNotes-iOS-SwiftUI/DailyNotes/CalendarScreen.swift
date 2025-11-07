@@ -71,9 +71,17 @@ struct DayCell: View {
         VStack(spacing: 4) {
             Text("\(Calendar.current.component(.day, from: day))")
                 .frame(maxWidth: .infinity)
-            Circle()
-                .frame(width: 6, height: 6)
-                .opacity(entry?.isCompleted == true ? 1 : 0.15)
+            if let mood = entry?.mood {
+                Image(systemName: "circle.fill")
+                    .font(.caption)
+                    .foregroundStyle(DayCell.moodColor(for: mood))
+                    .accessibilityHidden(true)
+            } else {
+                Circle()
+                    .frame(width: 6, height: 6)
+                    .opacity(entry?.isCompleted == true ? 1 : 0.15)
+                    .accessibilityHidden(true)
+            }
         }
         .padding(6)
         .background(
@@ -82,11 +90,72 @@ struct DayCell: View {
         )
         .accessibilityLabel(Text(accessibilityText))
     }
+
     private var accessibilityText: String {
         let df = DateFormatter()
         df.dateStyle = .medium
-        let status = (entry?.isCompleted == true) ? "completed" : "not completed"
-        return "\(df.string(from: day)), \(status)"
+        let dateString = df.string(from: day)
+        var parts: [String] = [dateString]
+        if let e = entry {
+            let status = e.isCompleted ? "completed" : "not completed"
+            parts.append(status)
+            if let mood = e.mood, (0...10).contains(mood) {
+                let moodDesc: String
+                switch mood {
+                case 0...2: moodDesc = "very low mood"
+                case 3...4: moodDesc = "low mood"
+                case 5: moodDesc = "neutral mood"
+                case 6...7: moodDesc = "good mood"
+                case 8...10: moodDesc = "great mood"
+                default: moodDesc = ""
+                }
+                if !moodDesc.isEmpty { parts.append(moodDesc) }
+            }
+        }
+        return parts.joined(separator: ", ")
+    }
+}
+
+extension DayCell {
+    static func faceSymbol(for mood: Int) -> String {
+        switch mood {
+        case 0...2: return "face.frown"
+        case 3...4: return "face.neutral"
+        case 5: return "face.neutral"
+        case 6...7: return "face.smiling"
+        case 8...10: return "face.smiling.fill"
+        default: return "face.smiling"
+        }
+    }
+    static func faceColor(for mood: Int) -> Color {
+        switch mood {
+        case 0...2: return .red
+        case 3...4: return .orange
+        case 5: return .yellow
+        case 6...7: return .green
+        case 8...10: return .blue
+        default: return .secondary
+        }
+    }
+    static func emoji(for mood: Int) -> String {
+        switch mood {
+        case 0...2: return "😞"
+        case 3...4: return "☹️"
+        case 5: return "😐"
+        case 6...7: return "🙂"
+        case 8...10: return "😄"
+        default: return "🙂"
+        }
+    }
+    static func moodColor(for mood: Int) -> Color {
+        switch mood {
+        case 0...2: return .red
+        case 3...4: return .orange
+        case 5: return .yellow
+        case 6...7: return .green
+        case 8...10: return .blue
+        default: return .secondary
+        }
     }
 }
 

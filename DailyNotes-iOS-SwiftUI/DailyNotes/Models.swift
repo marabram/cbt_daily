@@ -8,6 +8,7 @@ final class NoteEntry: Identifiable {
     var content: String
     var createdAt: Date
     var updatedAt: Date
+    var mood: Int? = nil
     
     var isCompleted: Bool {
         !content.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
@@ -30,3 +31,4 @@ final class NoteEntry: Identifiable {
         return df.string(from: Calendar.current.startOfDay(for: date))
     }
 }
+

@@ -6,6 +6,20 @@
 	objectVersion = 60;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D3B23D052EBDC21C002248FE /* CalendarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAPP1005 /* CalendarScreen.swift */; };
+		D3B23D062EBDC222002248FE /* DailyNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAPP1001 /* DailyNotesApp.swift */; };
+		D3B23D072EBDC22C002248FE /* EntryEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAPP1006 /* EntryEditorView.swift */; };
+		D3B23D082EBDC22F002248FE /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAPP1008 /* Exporter.swift */; };
+		D3B23D092EBDC233002248FE /* HistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAPP1007 /* HistoryScreen.swift */; };
+		D3B23D0A2EBDC23B002248FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAPP2001 /* LaunchScreen.storyboard */; };
+		D3B23D0B2EBDC241002248FE /* Assets 2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FAPP3001 /* Assets 2.xcassets */; };
+		D3B23D0C2EBDC244002248FE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAPP1002 /* Models.swift */; };
+		D3B23D0D2EBDC244002248FE /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAPP1003 /* RootView.swift */; };
+		D3B23D0E2EBDC244002248FE /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B23CD42EBDA29C002248FE /* SettingsScreen.swift */; };
+		D3B23D0F2EBDC244002248FE /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAPP1004 /* TodayView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1FAPP1001 /* DailyNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNotesApp.swift; sourceTree = "<group>"; };
 		1FAPP1002 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -120,6 +134,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B23D0B2EBDC241002248FE /* Assets 2.xcassets in Resources */,
+				D3B23D0A2EBDC23B002248FE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +146,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B23D0C2EBDC244002248FE /* Models.swift in Sources */,
+				D3B23D0D2EBDC244002248FE /* RootView.swift in Sources */,
+				D3B23D0E2EBDC244002248FE /* SettingsScreen.swift in Sources */,
+				D3B23D0F2EBDC244002248FE /* TodayView.swift in Sources */,
+				D3B23D092EBDC233002248FE /* HistoryScreen.swift in Sources */,
+				D3B23D082EBDC22F002248FE /* Exporter.swift in Sources */,
+				D3B23D072EBDC22C002248FE /* EntryEditorView.swift in Sources */,
+				D3B23D062EBDC222002248FE /* DailyNotesApp.swift in Sources */,
+				D3B23D052EBDC21C002248FE /* CalendarScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

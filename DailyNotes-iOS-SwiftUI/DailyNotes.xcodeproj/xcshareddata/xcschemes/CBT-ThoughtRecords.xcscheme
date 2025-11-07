@@ -67,6 +67,15 @@
             ReferencedContainer = "container:DailyNotes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D3B23CD92EBDB80C002248FE"
+            BuildableName = "CBT-ThoughtRecords.app"
+            BlueprintName = "CBT-ThoughtRecords"
+            ReferencedContainer = "container:DailyNotes.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
